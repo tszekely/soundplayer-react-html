@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>HTML5 Music Player</title>
+  <link href='assets/css/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/font-awesome-4.3.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<div id="container">
+  <button id="menu-toggle">
+    <i class="fa fa-bars fa-fw fa-2x"></i>
+  </button>
+
+  <ul id="menu" class="hidden">
+    <li class="active">
+      <a href="#">
+        Now Playing
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        Explore Tracks
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        My Playlists
+      </a>
+    </li>
+  </ul>
+
+  <div id="cover-art">
+    <div id="cover-art-big"></div>
+    <img id="cover-art-small" alt="cover-art-small" src="http://netstorage.metrolyrics.com/albums/9414151jpg.jpg">
+    <div class="instructions">Drop your audio files here.</div>
+  </div>
+
+  <div id="wave">
+    <img src="assets/img/waveform.png" alt="wave" width="100%" style="display: block;" />
+  </div>
+
+  <div id="control-bar">
+    <div class="player-control">
+      <div id="previous-button" title="Previous"><i class="fa fa-fast-backward"></i></div>
+      <div id="play-button" title="Play"><i class="fa fa-play"></i></div>
+      <div id="pause-button" title="Pause"><i class="fa fa-pause"></i></div>
+      <div id="stop-button" title="Stop"><i class="fa fa-stop"></i></div>
+      <div id="next-button" title="Next"><i class="fa fa-fast-forward"></i></div>
+      <div id="shuffle-button" title="Shuffle Off"><i class="fa fa-random"></i></div>
+      <div id="repeat-button" title="Repeat Off"><i class="fa fa-refresh"><span>1</span></i></div>
+    </div>
+
+    <div id="playlist">
+      <div id="track-details" title="Show playlist">
+        <i class="fa fa-sort"></i>
+        <p id="track-desc">
+          <b>Never Gonna Give You Up</b>
+          by Rick Astley
+        </p>
+        <p id="track-time">
+          <span id="current">0:00</span> / <span id="total">3:32</span>
+        </p>
+      </div>
+
+      <div id="expand-bar">
+        <form>
+          <label for="searchBox">Search</label><div><input id="searchBox" type="search" name="search"></div>
+        </form>
+
+        <ul id="list">
+          <li class="track active" data-index="0">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="http://netstorage.metrolyrics.com/albums/9414151jpg.jpg"></div>
+            <div><p class="title">Never Gonna Give You Up</p>
+              <p class="artist">Rick Astley</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="1">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Va Fi Bine (Produsa De Megiddo)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="2">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Stare De Vineri (Produsa De Megiddo)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="3">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Extreme (Produsa De Megiddo)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="4">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Free Porno Feat. No Mo &amp; Dj Soundmeth (Produsa De Megiddo)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="5">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Drama De Seara (Produsa De Megiddo)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="6">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Lumea Mea Feat. Ryno (Produsa De Megiddo)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="7">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Pentru Noi (Produsa De Base)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+          <li class="track" data-index="8">
+            <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+            <div><p class="title">Noaptea Feat. Nasta (Produsa De Base)</p>
+              <p class="artist">In Extremis</p><span title="Remove Track From Player" class="remove-track">×</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
