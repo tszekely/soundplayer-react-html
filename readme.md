@@ -5,7 +5,10 @@ The aim is to create an audio player using the Soundcloud API, with the followin
 
 - play tracks provided in a predefined list
 - search for tracks
-- 
+- create/remove playlists
+- add/remove tracks to/from playlists
+- repeat tracks/playlists
+- shuffle playlists
 
 ## Acknowledgments
 
