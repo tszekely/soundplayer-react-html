@@ -299,6 +299,10 @@ body, html {
     background-color: #fff;
     color: #222;
     cursor: default;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 
     transition: height 0.4s, box-shadow 0.2s;
 
@@ -337,17 +341,21 @@ body, html {
     box-shadow: 0 1px 1px #eee;
 }
 
+#expand-bar h2 {
+    padding: 18px 23px;
+    box-shadow: inset 0 -1px 3px rgba(0,0,0,0.2);
+    margin: 0 -5px;
+}
+
 /*	Playlist */
 
 #list {
-    position: absolute;
-    left: 0;
-    top: 55px;
-    bottom: 60px;
+    margin-bottom: 60px;
     list-style: none;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 #list li:nth-child(even) {
