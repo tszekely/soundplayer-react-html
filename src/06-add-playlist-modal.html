@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>SoundPlayer</title>
+  <link href='assets/css/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/font-awesome-4.3.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<div id="container" class="disabled">
+  <button id="menu-toggle">
+    <i class="fa fa-bars fa-fw fa-2x"></i>
+  </button>
+
+  <ul id="menu" class="hidden">
+    <li class="active">
+      <a href="#">
+        Now Playing
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        Explore Tracks
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        My Playlists
+      </a>
+    </li>
+  </ul>
+
+  <div id="all-tracks">
+    <form>
+      <label for="allTracksSearchBox">Search</label>
+      <div><input id="allTracksSearchBox" type="search" name="search"></div>
+    </form>
+
+    <ul>
+      <li class="track active" data-index="0">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="http://netstorage.metrolyrics.com/albums/9414151jpg.jpg"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Never Gonna Give You Up</p>
+          <p class="artist">Rick Astley</p>
+        </div>
+      </li>
+      <li class="track" data-index="1">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Va Fi Bine (Produsa De Megiddo)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+      <li class="track" data-index="2">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Stare De Vineri (Produsa De Megiddo)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+      <li class="track" data-index="3">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Extreme (Produsa De Megiddo)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+      <li class="track" data-index="4">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Free P Feat. No Mo &amp; Dj Soundmeth (Produsa De Megiddo)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+      <li class="track" data-index="5">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Drama De Seara (Produsa De Megiddo)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+      <li class="track" data-index="6">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Lumea Mea Feat. Ryno (Produsa De Megiddo)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+      <li class="track" data-index="7">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Pentru Noi (Produsa De Base)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+      <li class="track" data-index="8">
+        <div><span class="overlay"><i class="fa fa-play"></i></span><img src="assets/img/default.png"></div>
+        <div>
+          <button>
+            <i class="fa fa-fw fa-plus"></i>
+          </button>
+          <p class="title">Noaptea Feat. Nasta (Produsa De Base)</p>
+          <p class="artist">In Extremis</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div id="wave"></div>
+
+  <div id="control-bar">
+    <div class="player-control">
+      <div id="previous-button" title="Previous"><i class="fa fa-fast-backward"></i></div>
+      <div id="play-button" title="Play"><i class="fa fa-play"></i></div>
+      <div id="pause-button" title="Pause"><i class="fa fa-pause"></i></div>
+      <div id="stop-button" title="Stop"><i class="fa fa-stop"></i></div>
+      <div id="next-button" title="Next"><i class="fa fa-fast-forward"></i></div>
+      <div id="shuffle-button" title="Shuffle Off"><i class="fa fa-random"></i></div>
+      <div id="repeat-button" title="Repeat Off"><i class="fa fa-refresh"><span>1</span></i></div>
+    </div>
+
+    <div id="playlist">
+      <div id="track-details" title="Show playlist">
+        <i class="fa fa-sort"></i>
+        <p id="track-desc">There are no tracks loaded in the player.</p>
+        <p id="track-time">
+          <span id="current">-</span> / <span id="total">-</span>
+        </p>
+      </div>
+
+      <div id="expand-bar" class="hidden">
+        <h2>Playlist name</h2>
+
+        <form>
+          <label for="searchBox">Search</label><div><input id="searchBox" type="search" name="search"></div>
+        </form>
+        <ul id="list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="backdrop"></div>
+
+  <div class="modal">
+    <h2>Add "Never Gonna Give You Up" to Playlist</h2>
+
+    <form>
+      <label for="addToPlaylist">Playlist:</label>
+      <select id="addToPlaylist">
+        <option value="1">Abbey Road</option>
+        <option value="2">Atom Heart</option>
+        <option value="3">What's Going On</option>
+        <option value="4">Slave to the Rhythm</option>
+        <option value="5">Dark Side of the Moon</option>
+        <option value="new" selected>Create New Playlist</option>
+      </select>
+
+      <label for="addPlaylist">Playlist Name:</label>
+      <input type="text" id="addPlaylist">
+    </form>
+
+    <button>
+      Save
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

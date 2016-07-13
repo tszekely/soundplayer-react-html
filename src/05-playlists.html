@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>SoundPlayer</title>
+  <link href='assets/css/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/font-awesome-4.3.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<div id="container" class="disabled">
+  <button id="menu-toggle">
+    <i class="fa fa-bars fa-fw fa-2x"></i>
+  </button>
+
+  <ul id="menu" class="hidden">
+    <li class="active">
+      <a href="#">
+        Now Playing
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        Explore Tracks
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        My Playlists
+      </a>
+    </li>
+  </ul>
+
+  <ul id="playlists">
+    <li class="playlist">
+      <img src="http://www.udiscovermusic.com/wp-content/uploads/2015/10/AbbeyRoad.jpg" alt="Abbey Road" />
+      <h3>Abbey Road</h3>
+      <span>
+        <i class="fa fa-2x fa-play"></i>
+      </span>
+      <span title="Remove Playlist" class="remove">×</span>
+    </li>
+
+    <li class="playlist">
+      <img src="http://www.udiscovermusic.com/wp-content/uploads/2015/10/Atom-Heart.jpg" alt="Atom Heart" />
+      <h3>Atom Heart</h3>
+      <span>
+        <i class="fa fa-2x fa-play"></i>
+      </span>
+      <span title="Remove Playlist" class="remove">×</span>
+    </li>
+
+    <li class="playlist">
+      <img src="http://www.udiscovermusic.com/wp-content/uploads/2015/10/Marvin-Gaye-Whats-Going-On-CD-ALBUM-581521.jpg" alt="What's Going On" />
+      <h3>What's Going On</h3>
+      <span>
+        <i class="fa fa-2x fa-play"></i>
+      </span>
+      <span title="Remove Playlist" class="remove">×</span>
+    </li>
+
+    <li class="playlist">
+      <img src="http://www.udiscovermusic.com/wp-content/uploads/2015/10/Slave-to-the-Rhythm.jpg" alt="Slave to the Rhythm" />
+      <h3>Slave to the Rhythm</h3>
+      <span>
+        <i class="fa fa-2x fa-play"></i>
+      </span>
+      <span title="Remove Playlist" class="remove">×</span>
+    </li>
+
+    <li class="playlist">
+      <img src="http://www.udiscovermusic.com/wp-content/uploads/2015/10/Pink_Floyd_-_Dark_Side_of_the_Moon.jpg" alt="Dark Side of the Moon" />
+      <h3>Dark Side of the Moon</h3>
+      <span>
+        <i class="fa fa-2x fa-play"></i>
+      </span>
+      <span title="Remove Playlist" class="remove">×</span>
+    </li>
+  </ul>
+
+  <div id="wave"></div>
+
+  <div id="control-bar">
+    <div class="player-control">
+      <div id="previous-button" title="Previous"><i class="fa fa-fast-backward"></i></div>
+      <div id="play-button" title="Play"><i class="fa fa-play"></i></div>
+      <div id="pause-button" title="Pause"><i class="fa fa-pause"></i></div>
+      <div id="stop-button" title="Stop"><i class="fa fa-stop"></i></div>
+      <div id="next-button" title="Next"><i class="fa fa-fast-forward"></i></div>
+      <div id="shuffle-button" title="Shuffle Off"><i class="fa fa-random"></i></div>
+      <div id="repeat-button" title="Repeat Off"><i class="fa fa-refresh"><span>1</span></i></div>
+    </div>
+
+    <div id="playlist">
+      <div id="track-details" title="Show playlist">
+        <i class="fa fa-sort"></i>
+        <p id="track-desc">There are no tracks loaded in the player.</p>
+        <p id="track-time">
+          <span id="current">-</span> / <span id="total">-</span>
+        </p>
+      </div>
+
+      <div id="expand-bar" class="hidden">
+        <h2>Playlist name</h2>
+
+        <form>
+          <label for="searchBox">Search</label><div><input id="searchBox" type="search" name="search"></div>
+        </form>
+        <ul id="list"></ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
