@@ -14,6 +14,56 @@ body, html {
     outline: none;
 }
 
+
+button.add {
+    float: right;
+    -webkit-appearance: none;
+    background: #ffffff;
+    height: 34px;
+    width: 34px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow: inset 0 0 3px #000000;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+    position: relative;
+}
+
+button.add:hover {
+    color: rgb(0,0,200);
+    background: #fefefe;
+    box-shadow: inset 0 0 5px rgba(0,0,200,1);
+    font-size: 14px;
+}
+
+button.add.loading {
+    color: transparent;
+    pointer-events: none;
+}
+
+button.add.loading:after {
+    content: '';
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+    animation: rotate 0.8s infinite linear;
+    border: 3px solid #3d464a;
+    border-right-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.75em 0 0 -0.75em;
+    box-sizing: border-box;
+}
+
+@keyframes rotate {
+    0%    { transform: rotate(0deg); }
+    100%  { transform: rotate(360deg); }
+}
+
 /*--------------------
 	Menu
 ----------------------*/
@@ -96,6 +146,9 @@ body, html {
     right: 0;
     background: rgba(0,0,0,0.3);
     z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*	App flex container	*/
@@ -207,28 +260,6 @@ body, html {
     font-size: 18px;
     line-height: 50px;
     left: 18px;
-}
-
-#all-tracks .track button {
-    float: right;
-    -webkit-appearance: none;
-    background: #ffffff;
-    height: 34px;
-    width: 34px;
-    border-radius: 3px;
-    border: 0;
-    cursor: pointer;
-    -webkit-box-shadow: inset 0 0 3px #000000;
-    box-shadow: inset 0 0 3px #000000;
-    -webkit-transition: all .1s;
-    transition: all .1s;
-}
-
-#all-tracks .track button:hover {
-    color: rgb(0,0,200);
-    background: #fefefe;
-    box-shadow: inset 0 0 5px rgba(0,0,200,1);
-    font-size: 14px;
 }
 
 /*---------------------------
@@ -532,6 +563,10 @@ select {
     margin: 0 -5px;
 }
 
+#expand-bar .add {
+    margin: -5px 0;
+}
+
 /*	Playlist */
 
 #list {
@@ -623,16 +658,14 @@ select {
 }
 
 .modal {
-    position: fixed;
+    position: relative;
     z-index: 100;
-    top: 50%;
-    left: 50%;
     background: #ffffff;
     border-radius: 2px;
     padding: 18px;
     width: 540px;
     max-width: 100%;
-    transform: translate(-50%, -50%);
+    flex: 0 1 auto;
 }
 
 .modal h2 {
