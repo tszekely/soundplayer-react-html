@@ -14,6 +14,9 @@ body, html {
     outline: none;
 }
 
+ul {
+    list-style: none;
+}
 
 button.add {
     float: right;
@@ -104,7 +107,6 @@ button.add.loading:after {
     -webkit-transition: transform .2s;
     transition: transform .2s;
     overflow-y: auto;
-    list-style: none;
 }
 
 #menu ul {
@@ -270,7 +272,6 @@ button.add.loading:after {
     flex-flow: row wrap;
     overflow-y: auto;
     align-content: flex-start;
-    list-style: none;
     padding: 48px 5% 18px;
 }
 
@@ -571,11 +572,11 @@ select {
 
 #list {
     margin-bottom: 60px;
-    list-style: none;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    flex: 1 auto;
 }
 
 #list li:nth-child(even) {
